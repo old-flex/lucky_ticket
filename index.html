@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>Счастливый билет</title>
+</head>
+<body style="height: 100%; width: 100%;">
+
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; flex-direction: column">
+
+    <h1 style="color: red; font-size: 24px">
+        СЧОСТЛИЫВЙ БЕЛЕТ!
+    </h1>
+
+    <div style="margin-top: 20px">
+        <label>
+            <input id="numbers">
+        </label>
+    </div>
+
+    <div style="margin-top: 20px">
+        <button id="submit" style="width: 100px">
+            ВПЕРДЕ!
+        </button>
+    </div>
+
+
+    <div style="margin-top: 20px">
+        <button id="reset" style="width: 100px">
+            СБРОС))
+        </button>
+    </div>
+
+    <h2 id="answer">
+    </h2>
+
+</div>
+
+<script>
+
+    submit.onclick = function () {
+        let test = document.getElementById('numbers').value
+        if (Math.floor(parseInt(test, 10) / 1000) === (parseInt(test, 10) % 1000)) {
+            document.getElementById('answer').innerText = "Да"
+        } else {
+            document.getElementById('answer').innerText = "Нет"
+
+        }
+    }
+
+    reset.onclick = function () {
+        document.getElementById('numbers').value = ""
+    }
+
+
+</script>
+
+</body>
+</html>
